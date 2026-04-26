@@ -61,7 +61,14 @@
             "tasks": [
                 {
                     "text": "ADKAR eLearning training 완료",
-                    "url": "https://portal.prosci.com/"
+                    "url": "https://portal.prosci.com/",
+                    "subtasks": [
+                        "Charles In Progress",
+                        "Kim Completed",
+                        "Nandie",
+                        "Regina",
+                        "Steven"
+                    ]
                 },
                 {
                     "text": "4Ps Activity 완료",
