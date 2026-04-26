@@ -194,18 +194,6 @@
       color: #a0aec0;
     }
 
-    .task-subitems {
-      list-style: none;
-      margin-top: 0.25rem;
-      margin-left: 1rem;
-    }
-
-    .task-subitems li {
-      font-size: 0.83rem;
-      color: #4a5568;
-      padding: 3px 0;
-    }
-
     .tasks a,
     .class-day a {
       color: #2563eb;
@@ -272,7 +260,7 @@
   <script>
     let currentLang = 'en';
     const cache = {};
-    const assetVersion = '20260426-adkar-progress';
+    const assetVersion = '20260426-remove-adkar-progress';
 
     async function loadLang(lang) {
       if (cache[lang]) return cache[lang];
@@ -295,11 +283,7 @@
 
     function renderTask(task) {
       if (typeof task === 'string') return `<li>${task}</li>`;
-      const text = task.url ? externalLink(task.url, task.text) : task.text;
-      const subitems = (task.subtasks || [])
-        .map(subtask => `<li>${subtask}</li>`)
-        .join('');
-      return `<li>${text}${subitems ? `<ul class="task-subitems">${subitems}</ul>` : ''}</li>`;
+      return `<li>${task.url ? externalLink(task.url, task.text) : task.text}</li>`;
     }
 
     function renderMilestone(m) {
